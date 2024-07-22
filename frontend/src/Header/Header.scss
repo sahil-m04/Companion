@@ -1,0 +1,89 @@
+:root{
+    --primary-color:#fcf3ec;
+    --yellow-color:#fcd961;
+    --text-color-green: #1D8344;
+    --background-color: #fbf3e5;
+}
+#body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--background-color);
+    margin-bottom: 50px;
+  
+    #head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+  
+      #hamburger {
+        margin-right: 20px;
+        cursor: pointer;
+        color: var(--text-color-green);
+      }
+
+      #logo img{
+        flex: 1;
+        margin-top:10px;
+        width:200px;
+        height: auto;
+      }
+      }
+      #log-out {
+        background-color: var(--yellow-color);
+        color: var(--text-color-green);
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+        margin-right: 10px;
+  
+        &:hover {
+          background-color: var(--text-color-green);
+          color: var(--yellow-color);
+        }
+      }
+  
+        img {
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          margin-right: 10px;
+          
+          &:hover{
+            cursor: pointer;
+          }
+        }
+        
+    }
+
+  
+  // Responsive styles
+  @media (max-width: 768px) {
+    #body {
+      flex-direction: column;
+      align-items: center;
+  
+      #head {
+        flex-direction: column;
+        align-items: center;
+  
+        #title {
+          text-align: center;
+          margin: 10px 0;
+        }
+  
+        #log-out {
+          margin: 10px 0;
+        }
+  
+        #profile {
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+  

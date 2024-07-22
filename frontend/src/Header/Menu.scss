@@ -1,0 +1,38 @@
+$background-color: #fbf3e5;
+$primary-color: #fcf3ec;
+$yellow-color: #fcd961;
+$text-color-green: #1D8344;
+
+.navbar {
+  background-color: $background-color;
+  padding-bottom: 10px;
+  color: $text-color-green;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  position: relative;
+
+  .navbar-links {
+    list-style: none;
+    display: flex;
+  }
+
+  .navbar-link {
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    margin-top: 5px;
+    background: $background-color;
+    color: $text-color-green;
+    padding: 5px;
+    border-radius: 2px;
+
+    &:hover {
+      color: $yellow-color;
+      padding: 5px;
+      border-radius: 2px;
+    }
+  }
+}

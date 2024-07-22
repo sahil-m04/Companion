@@ -1,0 +1,74 @@
+// Variables for easy customization
+$background-color: #fbf3e5;
+$primary-color:#fcf3ec;
+$yellow-color:#fcd961;
+$text-color-green: #1D8344;
+$padding: 20px;
+$mobile-breakpoint: 768px;
+
+body{
+    background-color: $primary-color;
+}
+// Styles for the intro section
+#intro {
+  background-color: $background-color;
+  color: $text-color-green;
+  padding: $padding;
+  margin-bottom: 20px;
+  text-align: center;
+  height: 300px;
+
+  #welcome {
+    margin: 0 0 10px 0;
+    font-size: 2.5em;
+  }
+
+  #cmp {
+    font-weight: bold;
+    color: $yellow-color;
+  }
+
+  p {
+    color: black;
+    margin: 0 10px 10px 0;
+    font-size: 1.5em;
+  }
+}
+
+// Styles for the our-mission section
+#our-mission {
+  background-color: $background-color;
+  color: $text-color-green;
+  padding: $padding;
+  margin-bottom: 20px;
+
+  h2 {
+    margin: 0 0 10px 0;
+    font-size: 2em;
+    text-align: center;
+  }
+
+  p {
+    margin: 0 0 10px 0;
+    color: black;
+  }
+}
+
+// Responsive styles
+@media (max-width: $mobile-breakpoint) {
+  #intro {
+    padding: 10px;
+
+    #welcome {
+      font-size: 1.2em;
+    }
+  }
+
+  #our-mission {
+    padding: 10px;
+
+    h2 {
+      font-size: 1.5em;
+    }
+  }
+}
