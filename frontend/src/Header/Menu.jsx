@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from 'react-router-dom';
-import './Menu.scss'; 
+import './Menu.scss';
 
 function Menu() {
     return (
