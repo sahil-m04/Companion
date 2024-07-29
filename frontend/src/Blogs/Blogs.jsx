@@ -1,5 +1,5 @@
 import React from 'react';
-import './Blogs.scss'; // Assuming you have some styles for the Blogs component
+import './Blogs.scss'; 
 
 function Blogs() {
     return (

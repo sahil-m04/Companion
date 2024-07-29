@@ -1,5 +1,5 @@
 import React from 'react';
-import './Chat.scss'; // Assuming you have some styles for the Chat component
+import './Chat.scss';
 
 function Chat() {
     return (

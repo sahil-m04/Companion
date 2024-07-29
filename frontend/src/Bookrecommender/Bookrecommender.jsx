@@ -1,5 +1,5 @@
 import React from 'react';
-import './Bookrecommender.scss'; // Assuming you have some styles for the Book Recommender component
+import './Bookrecommender.scss';
 
 function BookRecommender() {
     return (
