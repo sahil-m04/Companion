@@ -4,6 +4,7 @@ import Header from './Header/Header';
 import Home from './Home/Home';
 import About from './About/About';
 import BookRecommender from './Bookrecommender/Bookrecommender';
+import Resources from './Resources/Resources';
 import Chat from './Chat/Chat';
 import Blogs from './Blogs/Blogs';
 import './App.css';
@@ -17,6 +18,7 @@ function App() {
         <Route path="/Home" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/Bookrecommender" element={<BookRecommender />} />
+        <Route path="/Resources" element={<Resources />} />
         <Route path="/Chat" element={<Chat />} />
         <Route path="/Blogs" element={<Blogs />} />
       </Routes>
