@@ -18,7 +18,7 @@ function Menu() {
                 </li>
                 <li>
                     <NavLink to="/Bookrecommender" className="navbar-link">
-                        Book Recommender
+                        Books
                     </NavLink>
                 </li>
                 <li>

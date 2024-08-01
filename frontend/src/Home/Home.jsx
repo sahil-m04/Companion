@@ -3,7 +3,7 @@ import './Home.scss';
 
 function Home() {
   return (
-    <>
+    <div className='home-container'>
       <section id="intro">
         <h2 id="welcome">Welcome to <span id='cmp'>COMPANION</span></h2>
         <p>your online therapist</p>
@@ -33,7 +33,7 @@ function Home() {
         We invite you to explore our resources, connect with experts, and share your own experiences. Together, we can build a stronger, more informed community that values and prioritizes mental health.
       </p>
       </section>
-    </>
+    </div>
   );
 }
 

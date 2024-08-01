@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './Header/Header';
+import Footer from './Footer/Footer';
 import Home from './Home/Home';
 import About from './About/About';
 import BookRecommender from './Bookrecommender/Bookrecommender';
@@ -22,6 +23,7 @@ function App() {
         <Route path="/Chat" element={<Chat />} />
         <Route path="/Blogs" element={<Blogs />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
