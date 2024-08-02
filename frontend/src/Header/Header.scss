@@ -186,6 +186,16 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   overflow-y: auto; /* Allow vertical scrolling if needed */
 
+  #hamlogo{
+    display: flex;
+      justify-content: center;
+
+      img {
+        width: 100px;
+        height: auto;
+      }
+  }
+
   .navbar {
     display: flex;
     flex-direction: column; /* Stack links vertically */

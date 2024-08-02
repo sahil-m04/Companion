@@ -1,14 +1,23 @@
 // Variables for easy customization
 $background-color: #fbf3e5;
-$primary-color:#fcf3ec;
-$yellow-color:#fcd961;
+$primary-color: #fcf3ec;
+$yellow-color: #fcd961;
 $text-color-green: #1D8344;
 $padding: 20px;
 $mobile-breakpoint: 768px;
 
-body{
-    background-color: $primary-color;
+// Body background
+body {
+  background-color: $primary-color;
 }
+
+// Home container styles
+.home-container {
+  padding: $padding;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 // Styles for the intro section
 #intro {
   background-color: $background-color;
@@ -16,11 +25,10 @@ body{
   padding: $padding;
   margin-bottom: 20px;
   text-align: center;
-  height: auto;
 
   #welcome {
     margin: 0 0 10px 0;
-    font-size: 2.5em;
+    font-size: 2.5em; 
   }
 
   #cmp {
@@ -31,7 +39,7 @@ body{
   p {
     color: black;
     margin: 0 10px 10px 0;
-    font-size: 1.5em;
+    font-size: 16px; 
   }
 }
 
@@ -41,8 +49,10 @@ body{
   color: $text-color-green;
   padding: $padding;
   margin-bottom: 20px;
-  text-align: center;
-  line-height: 3.5em;
+
+  .mission-content, .offerings, .commitment, .join-us {
+    margin-bottom: 30px;
+  }
 
   h2 {
     margin: 0 0 10px 0;
@@ -52,21 +62,22 @@ body{
 
   p {
     margin: 0 10px 10px 0;
-    font-size: 1.5em;
+    font-size: 16px; 
     color: black;
   }
-  #cmp1{
+
+  #cmp1 {
     font-weight: bold;
     color: $yellow-color;
   }
+
   ul {
     list-style-type: disc;
-    margin-left: 20px;
+    padding-left: 20px;
 
     li {
       margin-bottom: 10px;
-      font-size: 1.5em;
-      text-align: left;
+      font-size: 14px; 
       color: black;
     }
   }
@@ -78,25 +89,31 @@ body{
     padding: 10px;
 
     #welcome {
-      font-size: 1.2em;
+      font-size: 24px; 
     }
-    p{
-      font-size : 1em;
+
+    p {
+      font-size: 14px; 
     }
   }
 
   #our-mission {
     padding: 10px;
-    line-height: 2.5em;
 
     h2 {
-      font-size: 1.5em;
+      font-size: 20px; 
     }
-    p{
-      font-size: 1em;
+
+    p {
+      font-size: 14px; 
     }
-    ul li{
-      font-size: 1em;
+
+    ul {
+      padding-left: 15px;
+
+      li {
+        font-size: 14px; 
+      }
     }
   }
 }

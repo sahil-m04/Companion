@@ -45,6 +45,9 @@ function Header() {
             {isHamburgerDialogOpen && (
                 <div className="dialog hamburger-dialog">
                     <button onClick={toggleHamburgerDialog} id="dialog-close">X</button>
+                    <div id="hamlogo">
+                        <img src={Logo} alt="companion logo" />
+                    </div>
                     <Menu />
                 </div>
             )}

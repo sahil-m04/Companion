@@ -1,13 +1,12 @@
 import React from "react";
 import './Card.scss';
 
-const Card = ({ src, title, duration }) => {
+const Card = ({ src, title }) => {
     return (
       <div className="card">
-        <img src={src} alt="course image" />
+        <img src={src} alt="image" />
         <footer>
           <h2>{title}</h2>
-          <p>{duration}</p>
         </footer>
       </div>
     );
