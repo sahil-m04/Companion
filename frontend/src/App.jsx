@@ -7,7 +7,9 @@ import About from './About/About';
 import BookRecommender from './Bookrecommender/Bookrecommender';
 import Resources from './Resources/Resources';
 import Chat from './Chat/Chat';
-import Blogs from './Blogs/Blogs';
+import Blogs from './Blog/Blogs/Blogs';
+// import DisplayBlog from "./Blog/DisplayBlog/DisplayBlog";
+// import AddBlog from "./Blog/AddBlog/AddBlog";
 import './App.css';
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
         <Route path="/Resources" element={<Resources />} />
         <Route path="/Chat" element={<Chat />} />
         <Route path="/Blogs" element={<Blogs />} />
+        {/* <Route path="/View" element={<DisplayBlog />} />
+        <Route path="/Add" element={<AddBlog />} /> */}
       </Routes>
       <Footer />
     </Router>

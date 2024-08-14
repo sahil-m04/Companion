@@ -89,21 +89,21 @@ function About() {
           <img src={sujal} alt="Sujal Bindra" />
           </a>
           <h3>Sujal Bindra</h3>
-          <p>Co-founder</p>
+          <p>Founder</p>
         </div>
         <div className="team-member">
           <a href="https://www.linkedin.com/in/abhi-rawat-91143922b/" target="_blank" rel="noopener noreferrer">
           <img src={abhi} alt="Abhi Rawat" />
           </a>
           <h3>Abhi Rawat</h3>
-          <p>Co-founder</p>
+          <p>Founder</p>
         </div>
         <div className="team-member">
           <a href="https://www.linkedin.com/in/vaibhav-uniyal-3a0336286/" target="_blank" rel="noopener noreferrer">
           <img src={vaibhav} alt="Vaibhav Uniyal" />
           </a>
           <h3>Vaibhav Uniyal</h3>
-          <p>Co-founder</p>
+          <p>Founder</p>
         </div>
         {/* Repeat for each team member */}
       </div>
