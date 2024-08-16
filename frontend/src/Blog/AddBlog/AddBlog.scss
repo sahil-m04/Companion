@@ -1,23 +1,21 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px;
-}
+$background-color: #fbf3e5;
+$primary-color: #fcf3ec;
+$yellow-color: #fcd961;
+$text-color-green: #1D8344;
 
 form {
-    background-color: white;
+    background-color: $background-color;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     max-width: 70%;
-    margin: auto;
+    margin: 20px auto 50px auto;
     box-sizing: border-box;
 }
 
 h2 {
     text-align: center;
-    color: #333;
+    color: $text-color-green;
 }
 
 div {
@@ -28,7 +26,7 @@ label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #555;
+    color: $text-color-green;
 }
 
 input[type="text"],
@@ -57,7 +55,7 @@ input[type="file"] {
 }
 
 .submit-button:hover {
-    background-color: rgb(1, 106, 1);
+    background-color: $yellow-color;
     cursor: pointer;
 }
 

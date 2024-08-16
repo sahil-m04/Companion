@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Card.scss';
+import './BlogCard.scss';
 
 import BlogContext from '../../Context/BlogContext';
 
-const Card = ({ index, title}) => {
+const BlogCard = ({ index, title}) => {
 
     const navigate = useNavigate();
 
@@ -34,18 +34,18 @@ const Card = ({ index, title}) => {
 
     const f = () => {
         setId(index);
-        navigate('/view');
+        navigate('/Blog/DisplayBlog');
     }
 
     return (
-        <div className="card">
-            <img src={imageUrl} alt={title} className="card-image" />
-            <div className="card-content child-container">
-                <h3 className="card-title">{title}</h3>
-                <button className="card-button" onClick={f}>View</button>
+        <div className="blogcard">
+            <img src={imageUrl} alt={title} className="blogcard-image" />
+            <div className="blogcard-content child-container">
+                <h3 className="blogcard-title">{title}</h3>
+                <button className="blogcard-button" onClick={f}>View</button>
             </div>
         </div>
     );
 };
 
-export default Card;
+export default BlogCard;

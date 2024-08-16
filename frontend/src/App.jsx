@@ -8,8 +8,8 @@ import BookRecommender from './Bookrecommender/Bookrecommender';
 import Resources from './Resources/Resources';
 import Chat from './Chat/Chat';
 import Blogs from './Blog/Blogs/Blogs';
-// import DisplayBlog from "./Blog/DisplayBlog/DisplayBlog";
-// import AddBlog from "./Blog/AddBlog/AddBlog";
+import DisplayBlog from "./Blog/DisplayBlog/DisplayBlog";
+import AddBlog from "./Blog/AddBlog/AddBlog";
 import './App.css';
 
 function App() {
@@ -23,9 +23,9 @@ function App() {
         <Route path="/Bookrecommender" element={<BookRecommender />} />
         <Route path="/Resources" element={<Resources />} />
         <Route path="/Chat" element={<Chat />} />
-        <Route path="/Blogs" element={<Blogs />} />
-        {/* <Route path="/View" element={<DisplayBlog />} />
-        <Route path="/Add" element={<AddBlog />} /> */}
+        <Route path="/Blog/Blogs" element={<Blogs />} />
+        <Route path="/Blog/AddBlog" element={<AddBlog />} />
+        <Route path="/Blog/DisplayBlog" element={<DisplayBlog />} />
       </Routes>
       <Footer />
     </Router>

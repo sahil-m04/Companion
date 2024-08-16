@@ -1,4 +1,9 @@
-.card {
+$background-color: #fbf3e5;
+$primary-color: #fcf3ec;
+$yellow-color: #fcd961;
+$text-color-green: #1D8344;
+
+.blogcard {
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
@@ -6,30 +11,31 @@
     max-width: 300px;
     margin: 16px;
     transition: transform 0.2s;
+    background-color: $primary-color;
 
     &:hover {
         transform: scale(1.05);
     }
 
-    .card-image {
+    .blogcard-image {
         width: 100%;
         height: auto;
     }
 
-    .card-content {
+    .blogcard-content {
         padding: 16px;
 
-        .card-title {
+        .blogcard-title {
             font-size: 1.2rem;
             margin: 10px 0px;
         }
 
-        .card-description {
+        .blogcard-description {
             font-size: 1rem;
             margin: 8px 0;
         }
 
-        .card-button {
+        .blogcard-button {
             background-color: #007bff;
             color: white;
             border: none;

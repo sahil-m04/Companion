@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './AddBlog.scss'
+import './AddBlog.scss';
 import axios from 'axios';
 
 function AddBlog() {
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
     const [coverImage, setCoverImage] = useState(null);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState('');
 
     const navigate = useNavigate();
-    const f = () => {
-        navigate('/blog');
-    }
 
     const handleTitleChange = (event) => {
         setTitle(event.target.value);
@@ -27,6 +26,8 @@ function AddBlog() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        setLoading(true);
+        setError('');
 
         const formData = new FormData();
         formData.append('title', title);
@@ -34,21 +35,23 @@ function AddBlog() {
         formData.append('coverImage', coverImage);
     
         try {
-          const response = await axios.post('http://localhost:8000/blog', formData, {
+          await axios.post('http://localhost:8000/blog', formData, {
             headers: {
               'Content-Type': 'multipart/form-data',
             },
           });
 
-          f();
-
+          navigate('/Blog/Blogs'); // Redirect to the blog page after successful submission
         } catch (error) {
+          setError('Error uploading blog. Please try again.');
           console.error('Error uploading file:', error);
+        } finally {
+          setLoading(false);
         }
-    }
+    };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="add-blog-form">
             <div>
                 <label htmlFor="title">Title</label>
                 <input
@@ -72,18 +75,22 @@ function AddBlog() {
                 />
             </div>
             <div>
-                <label htmlFor="coverImage">File Upload</label>
+                <label htmlFor="coverImage">Upload Image</label>
                 <input
                     type="file"
                     id="coverImage"
                     name="coverImage"
+                    accept="image/*" // Only accept image files
                     onChange={handleFileChange}
                     required
                 />
             </div>
-            <button className="submit-button" type="submit">Submit</button>
+            {error && <p className="error-message">{error}</p>}
+            <button className="submit-button" type="submit" disabled={loading}>
+                {loading ? 'Submitting...' : 'Submit'}
+            </button>
         </form>
     );
-};
+}
 
 export default AddBlog;
