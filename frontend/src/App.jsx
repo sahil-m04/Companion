@@ -7,6 +7,8 @@ import BookRecommender from './Bookrecommender/Bookrecommender';
 import Chat from './Chat/Chat';
 import Blogs from './Blogs/Blogs';
 import './App.css';
+import LoginPage from './Login/LoginPage';
+import Signup from './Signup/SignUp';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route path="/Bookrecommender" element={<BookRecommender />} />
         <Route path="/Chat" element={<Chat />} />
         <Route path="/Blogs" element={<Blogs />} />
+        <Route path="/Login" element={<LoginPage />} />
+        <Route path="/Signup" element={<Signup />} />
       </Routes>
     </Router>
   );
