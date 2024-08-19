@@ -3,9 +3,7 @@ import './Signup.scss';
 
 const Signup = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    phoneNumber: '',
+    Name: '',
     email: '',
     password: '',
   });
@@ -25,49 +23,26 @@ const Signup = () => {
       <form className="signup-form" onSubmit={handleSubmit}>
         <h2 className="signup-title">Sign Up</h2>
 
-        <div className="form-row">
+       
           <div className="form-group">
-            <label htmlFor="firstName">First Name</label>
+            <label htmlFor="fullName">Full Name</label>
             <input
               type="text"
-              id="firstName"
-              name="firstName"
-              value={formData.firstName}
+              id="fullName"
+              name="fullName"
+              placeholder="Alex Anderson "
+              value={formData.fullName}
               onChange={handleChange}
               required
             />
-          </div>
-          <div className="form-group">
-            <label htmlFor="lastName">Last Name</label>
-            <input
-              type="text"
-              id="lastName"
-              name="lastName"
-              value={formData.lastName}
-              onChange={handleChange}
-              required
-            />
-          </div>
         </div>
-
-        <div className="form-group">
-          <label htmlFor="phoneNumber">Phone Number</label>
-          <input
-            type="tel"
-            id="phoneNumber"
-            name="phoneNumber"
-            value={formData.phoneNumber}
-            onChange={handleChange}
-            required
-          />
-        </div>
-
         <div className="form-group">
           <label htmlFor="email">Email</label>
           <input
             type="email"
             id="email"
             name="email"
+            placeholder="xyz@gmail.com"
             value={formData.email}
             onChange={handleChange}
             required
@@ -80,6 +55,7 @@ const Signup = () => {
             type="password"
             id="password"
             name="password"
+            placeholder="********"
             value={formData.password}
             onChange={handleChange}
             required
