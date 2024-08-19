@@ -15,11 +15,11 @@ function AddBlog() {
     const handleTitleChange = (event) => {
         setTitle(event.target.value);
     };
-    
+
     const handleBodyChange = (event) => {
         setBody(event.target.value);
     };
-    
+
     const handleFileChange = (event) => {
         setCoverImage(event.target.files[0]);
     };
@@ -33,26 +33,26 @@ function AddBlog() {
         formData.append('title', title);
         formData.append('body', body);
         formData.append('coverImage', coverImage);
-    
-        try {
-          await axios.post('http://localhost:8000/blog', formData, {
-            headers: {
-              'Content-Type': 'multipart/form-data',
-            },
-          });
 
-          navigate('/Blog/Blogs'); // Redirect to the blog page after successful submission
+        try {
+            await axios.post('http://localhost:8000/blog', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            });
+
+            navigate('/Blog/Blogs'); // Redirect to the blog page after successful submission
         } catch (error) {
-          setError('Error uploading blog. Please try again.');
-          console.error('Error uploading file:', error);
+            setError('Error uploading blog. Please try again.');
+            console.error('Error uploading file:', error);
         } finally {
-          setLoading(false);
+            setLoading(false);
         }
     };
 
     return (
         <form onSubmit={handleSubmit} className="add-blog-form">
-            <div>
+            <div className='formlabel'>
                 <label htmlFor="title">Title</label>
                 <input
                     type="text"
@@ -63,18 +63,18 @@ function AddBlog() {
                     required
                 />
             </div>
-            <div>
-                <label htmlFor="body">Body</label>
-                <input
-                    type="textarea"
-                    id="body"
-                    name="body"
+            <div className='formlabel'>
+                <label htmlFor="formbody">Body</label>
+                <textarea
+                    id="formbody"
+                    name="formbody"
                     value={body}
                     onChange={handleBodyChange}
+                    rows="10"
                     required
                 />
             </div>
-            <div>
+            <div className='formlabel'>
                 <label htmlFor="coverImage">Upload Image</label>
                 <input
                     type="file"

@@ -7,7 +7,7 @@
 
 .about-container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto 30px auto;
   padding: 20px;
   background-color: var(--background-color);
   color: var(--text-color-green);
@@ -33,6 +33,9 @@
     color:black;
   }
 
+  strong{
+    color: var(--yellow-color);
+  }
   ul {
     list-style-type: none;
     padding: 0;

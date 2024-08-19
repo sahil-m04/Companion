@@ -11,17 +11,11 @@ form {
     max-width: 70%;
     margin: 20px auto 50px auto;
     box-sizing: border-box;
-}
 
-h2 {
-    text-align: center;
-    color: $text-color-green;
+    .formlabel{
+        margin-bottom: 0;
+    }
 }
-
-div {
-    margin-bottom: 15px;
-}
-
 label {
     display: block;
     margin-bottom: 5px;
@@ -30,13 +24,19 @@ label {
 }
 
 input[type="text"],
-input[type="textarea"],
+textarea,
 input[type="file"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+
+textarea {
+    resize: vertical; // Allows users to resize the textarea vertically only
+    min-height: 250px; // Ensures a decent starting height for the textarea
 }
 
 input[type="file"] {
@@ -51,7 +51,7 @@ input[type="file"] {
     padding: 10px 15px;
     cursor: pointer;
     font-size: 16px;
-    width: 100%;
+    width: 20%;
 }
 
 .submit-button:hover {
@@ -65,7 +65,8 @@ input[type="file"] {
         padding: 15px;
     }
 
-    button {
+    .submit-button {
         padding: 10px;
+        font-size: 10px;
     }
 }

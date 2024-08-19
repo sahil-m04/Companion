@@ -1,7 +1,6 @@
 import React, { useEffect, useContext } from 'react'
 import BlogCard from "../Card/BlogCard";
 import './Blogs.scss'
-import Navbar from '../Navbar/Navbar';
 import BlogContext from '../../Context/BlogContext';
 
 function Blogs() {
@@ -26,9 +25,6 @@ function Blogs() {
 
     return (
         <>
-            <div>
-            <Navbar/>
-            </div>
             <h1>Community Blogs</h1>
             <div className="card-grid">
                 {blog.map((post, index) => (

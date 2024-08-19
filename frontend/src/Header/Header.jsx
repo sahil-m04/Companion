@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faEllipsisV } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import dp from '../assets/dp.jpg';
 import Logo from '../assets/Logo.png';
 import './Header.scss';
 import Menu from './Menu';
+import logout from '../assets/logout.png';
+import addblog from '../assets/notes.png';
 
 function Header() {
     const [isProfileDialogOpen, setProfileDialogOpen] = useState(false);
     const [isHamburgerDialogOpen, setHamburgerDialogOpen] = useState(false);
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const toggleProfileDialog = () => {
         setProfileDialogOpen(!isProfileDialogOpen);
@@ -18,10 +23,14 @@ function Header() {
         setHamburgerDialogOpen(!isHamburgerDialogOpen);
     };
 
+    const navigateToAddBlog = () => {
+        navigate('/Blog/AddBlog');
+    };
+
     return (
         <section id="body">
             <header id="head">
-                <div id="hamburger" onClick={toggleHamburgerDialog}>
+                <div id="hamburger" onClick={toggleHamburgerDialog} aria-label='Open '>
                     <FontAwesomeIcon icon={faBars} />
                 </div>
                 <div id="logo">
@@ -31,15 +40,30 @@ function Header() {
                     <Menu />
                 </div>
                 <div className="right-section">
-                    <button id="log-out">Logout</button>
-                    <img src={dp} alt="profile" />
-                    <FontAwesomeIcon id="ellipsis" icon={faEllipsisV} onClick={toggleProfileDialog} />
+                    {location.pathname.startsWith('/Blog') && (
+                        <button className="add-blog-button" onClick={navigateToAddBlog} aria-label='Write Blog'>
+                            <img src={addblog} alt="WriteBlog" />
+                            Write
+                        </button>
+                    )}
+                    <button className="profile-button" onClick={toggleProfileDialog} aria-label='Open Profile Dialog'>
+                        <img src={dp} alt="profile" />
+                    </button>
                 </div>
             </header>
             {isProfileDialogOpen && (
                 <div className="dialog profile-dialog">
                     <button onClick={toggleProfileDialog} id="dialog-close">X</button>
-                    <button id="log-out-dialog">Logout</button>
+                    {window.innerWidth <= 768 && location.pathname.startsWith('/Blog') && (
+                        <button className="add-blog-button-dialog" onClick={navigateToAddBlog} aria-label='Write Blog'>
+                            <img src={addblog} alt="AddBlog" />
+                            Write
+                        </button>
+                    )}
+                    <button id="log-out-dialog" aria-label='Logout'>
+                        <img src={logout} alt="Logout" />
+                        Logout
+                    </button>
                 </div>
             )}
             {isHamburgerDialogOpen && (

@@ -7,16 +7,23 @@
 
 #body {
   background-color: var(--background-color);
-  margin-bottom: 50px;
+  margin: 60px 0 150px;
 
   header#head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
     #hamburger {
-      display: none; /* Hide by default */
+      display: none;
       cursor: pointer;
       color: var(--text-color-green);
     }
@@ -44,37 +51,42 @@
       display: flex;
       align-items: center;
 
-      #log-out {
-        background-color: var(--yellow-color);
+      .add-blog-button {
+        background: transparent;
         color: var(--text-color-green);
-        border: none;
-        padding: 10px 20px;
+        padding: 10px 15px;
+        font-size: 14px;
         cursor: pointer;
+        border: none;
         border-radius: 5px;
-        font-size: 16px;
         margin-right: 10px;
+        transition: background-color 0.3s ease-in-out;
+
+        img {
+          width: 20px; // Adjust the width of the image as needed
+          height: 20px;
+        }
 
         &:hover {
-          background-color: var(--text-color-green);
           color: var(--yellow-color);
         }
       }
 
-      img {
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        margin-right: 10px;
-
-        &:hover {
-          cursor: pointer;
-        }
-      }
-
-      #ellipsis {
-        display: none;
+      .profile-button {
+        background: none;
+        border: none;
+        padding: 0;
         cursor: pointer;
-        color: var(--text-color-green);
+
+        img {
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+        }
+
+        &:hover img {
+          border: 2px solid var(--text-color-green);
+        }
       }
     }
   }
@@ -82,24 +94,48 @@
   @media (max-width: 768px) {
     header#head {
       #hamburger {
-        display: block; /* Show hamburger menu */
+        display: block;
       }
 
       #menu-wrapper {
-        display: none; /* Hide the menu items */
+        display: none;
       }
 
       #logo {
-        justify-content: center; /* Center the logo */
+        justify-content: center;
       }
 
       .right-section {
-        #log-out {
-          display: none; /* Hide logout button */
+        .add-blog-button {
+          display: none;
+        }
+      }
+    }
+
+    .profile-dialog {
+      .add-blog-button-dialog {
+        background-color: var(--yellow-color);
+        color: var(--text-color-green);
+        padding: 10px 15px;
+        font-size: 14px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease-in-out;
+
+        img {
+          width: 20px; // Adjust the width of the image as needed
+          height: 20px;
         }
 
-        #ellipsis {
-          display: block; /* Show ellipsis */
+        &:hover {
+          background-color: var(--text-color-green);
+          color: var(--yellow-color);
         }
       }
     }
@@ -108,37 +144,34 @@
   @media (min-width: 769px) {
     header#head {
       #menu-wrapper {
-        display: flex; /* Show the menu items */
+        display: flex;
       }
 
       #hamburger {
-        display: none; /* Hide the hamburger menu */
+        display: none;
       }
 
       #logo {
-        justify-content: flex-start; /* Align the logo to the left */
+        justify-content: flex-start;
       }
 
       #menu-wrapper {
         position: absolute;
         left: 50%;
-        transform: translateX(-50%); /* Center the menu */
+        transform: translateX(-50%);
       }
 
       .right-section {
         justify-content: flex-end;
-      }
-
-      #ellipsis {
-        display: none; /* Hide ellipsis on larger screens */
       }
     }
   }
 }
 
 .dialog {
+  z-index: 1001;
   position: absolute;
-  top: 50px;
+  top: 60px;
   right: 10px;
   background-color: var(--primary-color);
   border: 1px solid var(--text-color-green);
@@ -159,23 +192,37 @@
     background-color: var(--yellow-color);
     color: var(--text-color-green);
     border: none;
-    padding: 10px 20px;
+    padding: 10px 15px;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 10px;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease-in-out;
 
     &:hover {
       background-color: var(--text-color-green);
       color: var(--yellow-color);
     }
+
+    img {
+      width: 20px; // Adjust the width of the image as needed
+      height: 20px;
+      margin-right: 10px;
+    }
+  }
+
+  .add-blog-button-dialog {
+    display: none;
   }
 }
 
 .hamburger-dialog {
-  width: 250px; /* Width of the dialog box */
-  height: 100vh; /* Full viewport height */
+  width: 250px;
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
@@ -184,26 +231,26 @@
   border-radius: 5px;
   padding: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  overflow-y: auto; /* Allow vertical scrolling if needed */
+  overflow-y: auto;
 
-  #hamlogo{
+  #hamlogo {
     display: flex;
-      justify-content: center;
+    justify-content: center;
 
-      img {
-        width: 100px;
-        height: auto;
-      }
+    img {
+      width: 100px;
+      height: auto;
+    }
   }
 
   .navbar {
     display: flex;
-    flex-direction: column; /* Stack links vertically */
+    flex-direction: column;
     list-style: none;
     padding: 0;
 
     .navbar-link {
-      margin-bottom: 10px; /* Space between links */
+      margin-bottom: 10px;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s ease;
@@ -211,17 +258,11 @@
       color: var(--text-color-green);
       padding: 10px;
       border-radius: 2px;
-      display: block; /* Ensure links take full width */
+      display: block;
 
       &:hover {
         color: var(--yellow-color);
-        padding: 10px;
-        border-radius: 2px;
       }
     }
   }
-}
-
-.profile-dialog {
-  width: 100px;
 }

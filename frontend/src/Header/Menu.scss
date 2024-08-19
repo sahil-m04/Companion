@@ -40,6 +40,12 @@ $text-color-green: #1D8344;
       padding: 5px;
       border-radius: 2px;
     }
+    &.active {
+      color: $yellow-color;
+      // background: lighten($yellow-color, 40%);
+      padding: 5px;
+      border-radius: 2px;
+    }
     
     // Ensure links are displayed vertically within the dialog
     @media (max-width: 768px) {
