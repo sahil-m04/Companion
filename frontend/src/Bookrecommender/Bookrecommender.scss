@@ -1,10 +1,18 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+$background-color: #fbf3e5;
+$primary-color: #fcf3ec;
+$yellow-color: #fcd961;
+$text-color-green: #1D8344;
+$padding: 20px;
+$mobile-breakpoint: 768px;
+
+.book-recommender{
+    padding: $padding;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
 .search-bar{
-    width: auto;
+    width: 1200px;
     height: auto;
 }
 .heading{
