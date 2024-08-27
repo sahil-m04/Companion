@@ -1,0 +1,52 @@
+$background-color: #fbf3e5;
+$primary-color: #fcf3ec;
+$yellow-color: #fcd961;
+$text-color-green: #1D8344;
+
+.blogcard {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin: 16px;
+    transition: transform 0.2s;
+    background-color: $primary-color;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    .blogcard-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .blogcard-content {
+        padding: 16px;
+
+        .blogcard-title {
+            font-size: 1.2rem;
+            margin: 10px 0px;
+        }
+
+        .blogcard-description {
+            font-size: 1rem;
+            margin: 8px 0;
+        }
+
+        .blogcard-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+
+            &:hover {
+                background-color: #0056b3;
+            }
+        }
+    }
+}
