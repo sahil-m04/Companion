@@ -11,6 +11,8 @@ import Blogs from './Blog/Blogs/Blogs';
 import DisplayBlog from "./Blog/DisplayBlog/DisplayBlog";
 import AddBlog from "./Blog/AddBlog/AddBlog";
 import './App.css';
+import LoginPage from './Login/LoginPage';
+import Signup from './Signup/SignUp';
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
         <Route path="/Blog/Blogs" element={<Blogs />} />
         <Route path="/Blog/AddBlog" element={<AddBlog />} />
         <Route path="/Blog/DisplayBlog" element={<DisplayBlog />} />
+        <Route path="/Login" element={<LoginPage />} />
+        <Route path="/Signup" element={<Signup />} />
       </Routes>
       <Footer />
     </Router>

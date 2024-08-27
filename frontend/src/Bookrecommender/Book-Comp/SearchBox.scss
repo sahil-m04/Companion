@@ -1,0 +1,29 @@
+// src/Book-Comp/searchBox.scss
+.search-bar {
+    padding: 16px;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .results {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .result-item {
+    padding: 8px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+  }
+ 
