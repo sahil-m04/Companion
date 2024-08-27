@@ -6,9 +6,11 @@ $text-color-green: #1D8344;
 $padding: 20px;
 $mobile-breakpoint: 768px;
 
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 // Body background
 body {
   background-color: $primary-color;
+  font-family: "Quicksand", sans-serif;
 }
 
 // Home container styles
