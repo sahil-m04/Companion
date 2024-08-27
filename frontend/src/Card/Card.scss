@@ -86,7 +86,7 @@ body {
 // Responsive styles
 @media (max-width: $mobile-breakpoint) {
   .card {
-    width: 100%;
+    width: fit-content;
     margin: 10px;
 
     img {
