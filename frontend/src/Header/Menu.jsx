@@ -27,7 +27,7 @@ function Menu() {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/Chat" className="navbar-link" activeclassname="active">
+                    <NavLink to="/Chat/pages/home/Home" className="navbar-link" activeclassname="active">
                         Chat
                     </NavLink>
                 </li>
