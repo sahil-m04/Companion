@@ -1,14 +1,24 @@
+:root {
+  --primary-color: #fcf3ec;
+  --yellow-color: #fcd961;
+  --text-color-green: #1D8344;
+  --background-color: #fbf3e5;
+}
 .home-containers {
   display: flex;
-    height: 450px; // Default height, equivalent to sm:h-[450px]
-    border-radius: 0.5rem; // Equivalent to rounded-lg
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.25); // Equivalent to bg-black-400 with bg-opacity-0
-    backdrop-filter: blur(8px); 
-    -webkit-backdrop-filter: blur(8px); // For Safari support
+  justify-content: center;
+  flex-direction: row;
+  height: 800px; // Default height, equivalent to sm:h-[450px]
+  width: 1200px;
+  margin: auto;
+  border-radius: 0.5rem; // Equivalent to rounded-lg
+  border: 2px solid var(--text-color-green);
+  margin-bottom: 50px;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); // For Safari support
 
   @media (max-width: 768px) {
     flex-direction: column;
-    height: 80%;
   }
 }

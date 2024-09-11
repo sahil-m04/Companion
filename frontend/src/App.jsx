@@ -23,14 +23,16 @@ function App() {
     <Router>
       <Header />
       <Routes>
+      <Route path="/" element={<Home />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/Bookrecommender" element={<BookRecommender />} />
         <Route path="/Resources" element={<Resources />} />
-				<Route path='/Chat/pages/login' element={authUser ? <Navigate to='/' /> : <Login />} />
-        <Route path='/Chat/pages/signup' element={authUser ? <Navigate to='/' /> : <SignUp />} />
-        <Route path='/' element={authUser ? <ChatHome /> : <Navigate to="/login" />} />
+				<Route path='/Login' element={authUser ? <Navigate to='/ChatHome' /> : <Login />} />
+        <Route path='/Signup' element={authUser ? <Navigate to='/ChatHome' /> : <SignUp />} />
+        <Route path='/ChatHome' element={authUser ? <ChatHome /> : <Navigate to="/login" />} />
         <Route path="/Blog/Blogs" element={<Blogs />} />
+        <Route path='/Login' element={authUser ? <Navigate to='/Blog/Blogs' /> : <Login />} />
         <Route path="/Blog/AddBlog" element={<AddBlog />} />
         <Route path="/Blog/DisplayBlog" element={<DisplayBlog />} />
       </Routes>

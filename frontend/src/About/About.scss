@@ -8,12 +8,10 @@
 
 .about-container {
   max-width: 1200px;
-  margin: 0 auto 30px auto;
-  padding: 20px;
+  margin: 0 auto;
+  padding: 30px;
   background-color: var(--background-color);
-  color: var(--text-color-green);
   border-radius: 10px;
-  font-family: "Quicksand", sans-serif;
 
   h1, h2 {
     color: var(--text-color-green);
@@ -92,8 +90,6 @@
 
 @media (max-width: 768px) {
   .about-container {
-    padding: 15px;
-  }
 
   h1 {
     font-size: 24px;
@@ -124,12 +120,12 @@
     }
   }
 }
+}
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .about-container {
     padding: 20px;
-  }
-
+ 
   h1 {
     font-size: 28px;
   }
@@ -139,11 +135,11 @@
   }
 
   p {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   ul li {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .team {
@@ -159,4 +155,5 @@
       }
     }
   }
+}
 }

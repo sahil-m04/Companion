@@ -13,7 +13,7 @@ function DisplayBlog() {
 
     const current = blog[id];
 
-    const url = `http://localhost:8000/blog/${current.coverImageURL}`;
+    const url = `https://chat-app-b0yo.onrender.com/blog/${current.coverImageURL}`;
 
     useEffect(() => {
         const fetchImage = async () => {

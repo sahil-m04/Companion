@@ -19,10 +19,9 @@ const Login = () => {
       <div className="login-box">
         <h1>
           Login
-          <span className="chatapp-highlight"> ChatApp</span>
         </h1>
 
-        <form onSubmit={handleSubmit}>
+        <form className="loginform" onSubmit={handleSubmit}>
           <div>
             <label className="label">
               <span className="label-text">Username</span>

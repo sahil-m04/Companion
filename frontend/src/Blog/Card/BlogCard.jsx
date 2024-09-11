@@ -16,7 +16,7 @@ const BlogCard = ({ index, title}) => {
     useEffect(() => {
         const fetchImage = async () => {
             try {
-                const url = `http://localhost:8000/blog/${blog[index].coverImageURL}`;
+                const url = `https://chat-app-b0yo.onrender.com/blog/${blog[index].coverImageURL}`;
                 // const url = `http://localhost:8000/blog/1723461885490-gojo-satoru.jpg`;
 
                 // console.log(blog[index].coverImageURL);

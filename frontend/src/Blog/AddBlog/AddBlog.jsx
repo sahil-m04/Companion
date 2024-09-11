@@ -35,7 +35,7 @@ function AddBlog() {
         formData.append('coverImage', coverImage);
 
         try {
-            await axios.post('http://localhost:8000/blog', formData, {
+            await axios.post('https://chat-app-b0yo.onrender.com/blog', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },

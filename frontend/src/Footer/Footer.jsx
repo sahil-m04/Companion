@@ -37,7 +37,7 @@ const Footer = () => {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/Chat" className="navbar-link">
+                    <NavLink to="/ChatHome" className="navbar-link">
                         Chat
                     </NavLink>
                 </li>

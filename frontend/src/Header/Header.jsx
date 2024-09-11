@@ -6,8 +6,9 @@ import dp from '../assets/dp.jpg';
 import Logo from '../assets/Logo.png';
 import './Header.scss';
 import Menu from './Menu';
-import logout from '../assets/logout.png';
+// import logout from '../assets/logout.png';
 import addblog from '../assets/notes.png';
+import LogoutButton from '../Chat/Components/sidebar/LogoutButton';
 
 function Header() {
     const [isProfileDialogOpen, setProfileDialogOpen] = useState(false);
@@ -60,10 +61,11 @@ function Header() {
                             Write
                         </button>
                     )}
-                    <button id="log-out-dialog" aria-label='Logout'>
+                    {/* <button id="log-out-dialog" aria-label='Logout'>
                         <img src={logout} alt="Logout" />
                         Logout
-                    </button>
+                    </button> */}
+                    <LogoutButton />
                 </div>
             )}
             {isHamburgerDialogOpen && (

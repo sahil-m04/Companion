@@ -7,7 +7,7 @@ function Blogs() {
 
     const { blog, setBlog } = useContext(BlogContext);
 
-    const url = "http://localhost:8000/blog";
+    const url = "https://chat-app-b0yo.onrender.com/blog";
 
     useEffect(() => {
         const fetchBlogs = async () => {

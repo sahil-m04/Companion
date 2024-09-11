@@ -1,5 +1,5 @@
 import Conversations from "./Conversations";
-import LogoutButton from "./LogoutButton";
+// import LogoutButton from "./LogoutButton";
 import SearchInput from "./SearchInput";
 import "./sidebar.scss"; // Import the SCSS file
 
@@ -9,7 +9,7 @@ const Sidebar = () => {
       <SearchInput />
       <div className="divider"></div>
       <Conversations />
-      <LogoutButton />
+      {/* <LogoutButton /> */}
     </div>
   );
 };

@@ -28,7 +28,7 @@ const SignUp = () => {
     <div className="signup-container">
       <div className="signup-box">
         <h1 className="signup-title">
-          Sign Up <span className="highlight">ChatApp</span>
+          Sign Up 
         </h1>
 
         <form onSubmit={handleSubmit}>
