@@ -36,16 +36,19 @@ function Home() {
             <Card
               src={books}
               title="Books and Resources"
+              link="/Bookrecommender"
             />
 
             <Card
               src={expertchat}
               title="Expert Chat"
+              link="/ChatHome"
             />
 
             <Card
               src={communityblogs}
               title="Community Blogs"
+              link="/Blog/Blogs"
             />
           </Flexbox>
         </div>
