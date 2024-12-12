@@ -1,14 +1,26 @@
 // Variables for easy customization
 $background-color: #fbf3e5;
-$primary-color:#fcf3ec;
-$yellow-color:#fcd961;
+$primary-color: #fcf3ec;
+$yellow-color: #fcd961;
 $text-color-green: #1D8344;
 $padding: 20px;
 $mobile-breakpoint: 768px;
 
-body{
-    background-color: $primary-color;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+// Body background
+body {
+  background-color: $primary-color;
+  font-family: "Quicksand", sans-serif;
 }
+
+// Home container styles
+.home-container {
+  padding: $padding;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
 // Styles for the intro section
 #intro {
   background-color: $background-color;
@@ -16,11 +28,10 @@ body{
   padding: $padding;
   margin-bottom: 20px;
   text-align: center;
-  height: 300px;
 
   #welcome {
     margin: 0 0 10px 0;
-    font-size: 2.5em;
+    font-size: 2.5em; 
   }
 
   #cmp {
@@ -31,7 +42,7 @@ body{
   p {
     color: black;
     margin: 0 10px 10px 0;
-    font-size: 1.5em;
+    font-size: 16px; 
   }
 }
 
@@ -42,15 +53,36 @@ body{
   padding: $padding;
   margin-bottom: 20px;
 
+  .mission-content, .offerings, .commitment, .join-us {
+    margin-bottom: 30px;
+  }
+
   h2 {
     margin: 0 0 10px 0;
-    font-size: 2em;
+    font-size: 2.5em;
     text-align: center;
   }
 
   p {
-    margin: 0 0 10px 0;
+    margin: 0 10px 10px 0;
+    font-size: 16px; 
     color: black;
+  }
+
+  #cmp1 {
+    font-weight: bold;
+    color: $yellow-color;
+  }
+
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+
+    li {
+      margin-bottom: 10px;
+      font-size: 14px; 
+      color: black;
+    }
   }
 }
 
@@ -60,7 +92,11 @@ body{
     padding: 10px;
 
     #welcome {
-      font-size: 1.2em;
+      font-size: 24px; 
+    }
+
+    p {
+      font-size: 14px; 
     }
   }
 
@@ -68,7 +104,23 @@ body{
     padding: 10px;
 
     h2 {
-      font-size: 1.5em;
+      font-size: 20px; 
     }
+
+    p {
+      font-size: 14px; 
+      text-align: center;
+    }
+
+    ul {
+      padding-left: 15px;
+
+      li {
+        font-size: 14px; 
+      }
+    }
+  }
+  .offerings,.commitment{
+    margin-right: 10px;
   }
 }

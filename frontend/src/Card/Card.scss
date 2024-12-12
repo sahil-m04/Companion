@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+$card-width: 320px;
+$border-radius: 7px;
+$mobile-breakpoint: 768px;
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.card {
+  background: #fff;
+  width: fit-content;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: 0.2s ease;
+  &:hover {
+    box-shadow: 0 10px 20px 1px gray;
+    transform: scale(1.03);
+  }
+
+  img {
+    width: $card-width;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: $card-width;
+    padding: 10px 3px;
+
+    h2 {
+      font-weight: 400;
+      margin: 10px 0;
+      font-size: 1.2em;
+    }
+
+    p {
+      background: #b2ebf2;
+      padding: 7px;
+      border-radius: 5px;
+      width: 100px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .redirect-button {
+      background-color: #fcd961;
+      color: #1D8344;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 1em;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #1D8344;
+        color: #fcd961;
+      }
+    }
+  }
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 20px;
+}
+
+// Responsive styles
+@media (max-width: $mobile-breakpoint) {
+  .card {
+    width: fit-content;
+    margin: 10px;
+
+    img {
+      width: 100%;
+    }
+
+    footer {
+      width: 100%;
+      padding: 10px;
+
+      h2 {
+        font-size: 1em;
+        margin: 5px 0;
+      }
+
+      p {
+        font-size: 0.9em;
+        width: 90px;
+        padding: 5px;
+      }
+
+      .redirect-button {
+        font-size: 0.9em;
+        padding: 8px 15px;
+      }
+    }
+  }
+
+  .flex {
+    flex-direction: column;
+    align-items: center;
+  }
+}

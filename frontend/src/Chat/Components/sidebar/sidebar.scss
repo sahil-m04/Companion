@@ -1,0 +1,26 @@
+:root {
+  --primary-color: #fcf3ec;
+  --yellow-color: #fcd961;
+  --text-color-green: #1D8344;
+  --background-color: #fbf3e5;
+}
+
+.sidebar {
+  background-color: var(--background-color);
+  overflow-y: auto;
+  transition: all 0.3s ease;
+  padding: 1rem;
+  width: 400px;
+  border-right: 2px solid var(--text-color-green);
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 3000vh;
+  }
+
+  .divider {
+    margin: 0 0.75rem;
+    border-bottom: 1px solid #1d8344;
+    margin-bottom: 1rem;
+  }
+}
